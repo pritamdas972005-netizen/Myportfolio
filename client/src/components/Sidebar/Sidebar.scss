@@ -1,0 +1,119 @@
+/* ===============================
+      SIDEBAR CONTAINER
+================================ */
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  background: rgba(20, 20, 20, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 20px 0;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  transition: width 0.3s ease-in-out;
+  z-index: 100;
+
+  &.open {
+    width: 240px;
+  }
+
+  &:not(.open) {
+    width: 70px;
+
+    .title {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+}
+
+/* ===============================
+      TOGGLE BUTTON
+================================ */
+.toggle-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+/* ===============================
+      SIDEBAR MENU
+================================ */
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+
+/* Single Link */
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  text-decoration: none;
+  color: #dcdcdc;
+
+  padding: 12px 15px;
+  border-radius: 10px;
+
+  margin: 8px 0;
+  transition: 0.3s ease;
+
+  &:hover {
+    background: rgba(0, 180, 255, 0.15);
+    color: #fff;
+    transform: translateX(5px);
+  }
+}
+
+/* Icon Style */
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Title Text */
+.title {
+  font-size: 17px;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+/* ===============================
+      ACTIVE LINK
+================================ */
+.active {
+  background: rgba(0, 200, 255, 0.25);
+  color: #00eaff !important;
+  font-weight: 600;
+  border-left: 3px solid #00eaff;
+  transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .sidebar {
+    position: absolute;
+  }
+}

@@ -1,0 +1,153 @@
+/* ================================
+   NAVBAR GLOBAL STYLE
+================================ */
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  padding: 12px 0;
+  transition: background 0.3s ease;
+}
+
+/* Container */
+.nav-container {
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 25px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.nav-logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+  cursor: pointer;
+
+  transform: translateY(0);
+  animation: fadeInDown 0.8s ease forwards;
+}
+
+/* Desktop Menu */
+.nav-links {
+  display: flex;
+  gap: 35px;
+
+  a {
+    color: #ffffffbd;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+
+    /* Hover Animation */
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0%;
+      height: 2px;
+      background: #00eaff;
+      transition: width 0.3s ease;
+    }
+
+    &:hover {
+      color: #fff;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* Mobile Menu Icon */
+.mobile-menu-icon {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ================================
+   MOBILE MENU DROPDOWN
+================================ */
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: rgba(15, 15, 15, 0.9);
+  padding: 20px 0;
+  gap: 20px;
+  text-align: center;
+
+  animation: slideDown 0.4s ease forwards;
+
+  a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+
+    &:hover {
+      color: #00eaff;
+    }
+  }
+}
+
+/* ================================
+   MEDIA QUERIES
+================================ */
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+}
+
+/* ================================
+   ANIMATIONS
+================================ */
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

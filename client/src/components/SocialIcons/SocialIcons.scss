@@ -1,0 +1,26 @@
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+
+  .icon-box {
+    width: 42px;
+    height: 42px;
+    background: #121e27;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d4d4d4;
+    font-size: 20px;
+    transition: 0.3s ease;
+    border: 2px solid transparent;
+
+    &:hover {
+      color: var(--hover-color);
+      border-color: var(--hover-color);
+      transform: translateY(-4px);
+      background: #0f1419;
+    }
+  }
+}
