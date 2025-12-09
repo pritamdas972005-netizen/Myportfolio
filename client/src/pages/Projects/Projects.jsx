@@ -1,8 +1,6 @@
 import React from "react";
 import "./Projects.scss";
-import protfolio from "./protfolio.jpeg";
-
- // Replace with your portfolio image
+import protfolio from "./protfolio.jpeg"; // Replace with your portfolio image
 
 const Projects = () => {
   return (

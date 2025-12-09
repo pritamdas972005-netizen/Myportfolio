@@ -4,7 +4,7 @@ import "./SocialIcons.scss";
 
 const socials = [
   { name: "LinkedIn", href: "#", icon: <Linkedin size={22} />, color: "#0A66C2" },
-  { name: "GitHub", href: "#", icon: <Github size={22} />, color: "#171515" },
+  { name: "GitHub", href: "https://github.com/pritamdas972005-netizen", icon: <Github size={22} />, color: "#171515" },
   { name: "Twitter", href: "#", icon: <Twitter size={22} />, color: "#1DA1F2" },
   { name: "Instagram", href: "#", icon: <Instagram size={22} />, color: "#E4405F" },
 ];

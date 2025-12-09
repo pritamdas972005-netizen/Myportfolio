@@ -18,7 +18,7 @@ const Home = () => {
           <a href="#contact" className="btn hire-btn">
             Hire Me
           </a>
-          <a href="/cv.pdf" target="_blank" className="btn cv-btn">
+          <a href="/MYCV.pdf" target="_blank" download="Pritam_Das_CV" className="btn cv-btn">
             Download CV
           </a>
         </div>
